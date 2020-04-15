@@ -11,3 +11,7 @@ You can increase the temperature with an up function.
 User story 3.
 
 You can decrease the temperature with a down function.
+
+User story 4.
+
+The minimum temperature is 10 degrees

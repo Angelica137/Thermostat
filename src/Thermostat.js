@@ -1,5 +1,6 @@
 function Thermostat () {
   this.startingTemperature = Thermostat.STARTING_TEMPERATURE;
+  this.MIN_TEMPERATURE = 10;
   this.temperature = this.startingTemperature;
 }
 
@@ -10,5 +11,7 @@ Thermostat.prototype.up = function() {
 };
 
 Thermostat.prototype.down = function() {
-  this.temperature--;
+  if (this.temperature > this.MIN_TEMPERATURE ) {
+    this.temperature--;
+  }
 };

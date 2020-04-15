@@ -21,5 +21,13 @@ describe('Thermostat', function() {
       thermostat.down();
       expect(thermostat.temperature).toBe(Thermostat.STARTING_TEMPERATURE - 1);
     });
+
+    it('will not go below 10 degrees', function() {
+      for (var i = 0; i < 11; i++) {
+        thermostat.down();
+      }
+
+      expect(thermostat.temperature).toBe(10);
+    });
   });
 });
