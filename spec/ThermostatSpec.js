@@ -16,7 +16,6 @@ describe('Thermostat', function() {
     });
 
     it('caps temperature at 25 degrees when power saving mode on', function() {
-      thermostat.powerSavingSwitch();
       for (var i = 20; i < 26; i++ ) {
         thermostat.up();
       }
