@@ -14,6 +14,14 @@ describe('Thermostat', function() {
       thermostat.up();
       expect(thermostat.temperature).toBe(Thermostat.STARTING_TEMPERATURE + 1);
     });
+
+    it('caps temperature at 25 degrees when power saving mode on', function() {
+      thermostat.powerSavingSwitch();
+      for (var i = 20; i < 26; i++ ) {
+        thermostat.up();
+      }
+      expect(thermostat.temperature).toBe(25)
+    })
   });
 
   describe('#down', function() {
@@ -38,4 +46,5 @@ describe('Thermostat', function() {
       expect(thermostat.powerSaving).toBe(true);
     });
   });
+
 });
