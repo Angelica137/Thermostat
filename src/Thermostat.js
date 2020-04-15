@@ -2,6 +2,7 @@ function Thermostat () {
   this.startingTemperature = Thermostat.STARTING_TEMPERATURE;
   this.MIN_TEMPERATURE = 10;
   this.temperature = this.startingTemperature;
+  this.powerSaving = false;
 }
 
 Thermostat.STARTING_TEMPERATURE = 20;
@@ -15,3 +16,8 @@ Thermostat.prototype.down = function() {
     this.temperature--;
   }
 };
+
+Thermostat.prototype.powerSavingSwitch = function() {
+  this.powerSaving = true;
+};
+

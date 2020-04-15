@@ -15,3 +15,7 @@ You can decrease the temperature with a down function.
 User story 4.
 
 The minimum temperature is 10 degrees
+
+User story 5.
+
+If power saving mode is on, the maximum temperature is 25 degrees.
