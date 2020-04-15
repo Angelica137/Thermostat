@@ -15,4 +15,11 @@ describe('Thermostat', function() {
       expect(thermostat.temperature).toBe(Thermostat.STARTING_TEMPERATURE + 1);
     });
   });
+
+  describe('#down', function() {
+    it('descreases the temperature by one degree', function() {
+      thermostat.down();
+      expect(thermostat.temperature).toBe(Thermostat.STARTING_TEMPERATURE + 1);
+    });
+  });
 });
